@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "version": "0.0.1",
+    "name": "Facebook Block",
+    "description": "Bloqueia anúncios no Facebook",
+    "author": "Marcelo Menezes",
+    "browser_action": {
+   	 "default_title": "Facebook Block",
+   	 "default_popup": "index.html",
+   	 "default_icon": "icon.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.facebook.com/*"
+            ],
+            "js": [
+                "assets/js/jquery.js",
+                "assets/js/ADFacebook.js"
+            ]
+        }
+    ]
+}
